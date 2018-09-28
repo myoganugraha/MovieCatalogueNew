@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <string name="tab1_title">Sedang Tayang</string>
+    <string name="tab2_title">Akan Datang</string>
+    <string name="lang_dialog_title">Ganti Bahasa</string>
+
+    <string name="search_result_for">Hasil Pencarian Untuk:</string>
+</resources>

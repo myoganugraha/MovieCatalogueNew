@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1_title">Now Playing</string>
+    <string name="tab2_title">Upcoming</string>
+    <string name="language_setting">Change Language Settings</string>
+
+    <string name="lang_dialog_title">Change Language</string>
+    <string name="lang_dialog_message">Chose Language Bellow</string>
+    <string name="search_result_for">Search Result for:</string>
+
+
+    <string-array name="lang_select">
+        <item>English</item>
+        <item>Indonesian</item>
+    </string-array>
+</resources>
