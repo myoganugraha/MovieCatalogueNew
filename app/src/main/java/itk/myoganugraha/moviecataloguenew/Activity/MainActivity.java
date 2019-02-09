@@ -49,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setupViewPagger(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+
+        searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(MainActivity.this, SearchResultActivity.class);
+                intent.putExtra("query", query);
+                startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
     }
 
     private void setupViewPagger(ViewPager viewPager) {
@@ -121,6 +137,14 @@ public class MainActivity extends AppCompatActivity {
                     getResources().getDisplayMetrics());
             finish();
             startActivity(new Intent(this, MainActivity.class));
+        }
+        else if (item.getItemId() == R.id.action_settings){
+            startActivity(new Intent(MainActivity.this, SettingActivity.class));
+
+        }
+        else if (item.getItemId() == R.id.favorite){
+            Intent intent = new Intent(MainActivity.this, FavoriteActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -12,9 +12,6 @@ public interface BaseAPIService {
 
     @GET("search/movie")
     Call<MovieResponse> searchMovie(
-            @Query("api_key") String apiKey,
-            @Query("language") String language,
-            @Query("page") int page,
             @Query("query") String query
     );
 
@@ -33,9 +30,7 @@ public interface BaseAPIService {
 
     @GET("movie/upcoming")
     Call<MovieResponse> getUpcomingMovies(
-            @Query("api_key") String apiKey,
-            @Query("language") String language,
-            @Query("page") int page
+            @Query("language") String language
     );
 
     @GET("movie/{movie_id}")

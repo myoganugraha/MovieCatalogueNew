@@ -6,4 +6,11 @@
     <string name="lang_dialog_title">Ganti Bahasa</string>
 
     <string name="search_result_for">Hasil Pencarian Untuk:</string>
+    <string name="hello_blank_fragment">halo fragment kosong</string>
+    <string name="language_setting">Ganti Bahasa</string>
+    <string name="lang_dialog_message">Pilih Bahasa Dibawah</string>
+    <string name="appwidget_text">CONTOH</string>
+    <string name="add_widget">Tambahkan Widget</string>
+    <string name="key_reminder_daily">Pengingat Harian</string>
+    <string name="key_reminder_upcoming">Pengingat Akan Datang</string>
 </resources>

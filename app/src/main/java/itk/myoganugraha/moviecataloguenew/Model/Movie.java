@@ -1,5 +1,6 @@
 package itk.myoganugraha.moviecataloguenew.Model;
 
+import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -8,6 +9,17 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.provider.BaseColumns._ID;
+import static itk.myoganugraha.moviecataloguenew.Provider.DBContract.getColumnFloat;
+import static itk.myoganugraha.moviecataloguenew.Provider.DBContract.getColumnInt;
+import static itk.myoganugraha.moviecataloguenew.Provider.DBContract.getColumnString;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_BACKDROP;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_OVERVIEW;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_POSTER;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_RELEASE_DATE;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_TITLE;
+import static itk.myoganugraha.moviecataloguenew.Provider.FavColumns.COLUMN_VOTE;
 
 public class Movie implements Parcelable {
 
@@ -153,7 +165,7 @@ public class Movie implements Parcelable {
     }
 
     public String getPosterPath() {
-        return "http://image.tmdb.org/t/p/w500" + posterPath;
+        return posterPath;
     }
 
     public String getOriginalLanguage() {
@@ -169,7 +181,7 @@ public class Movie implements Parcelable {
     }
 
     public String getBackdropPath() {
-        return "http://image.tmdb.org/t/p/w780" +backdropPath;
+        return backdropPath;
     }
 
     public Boolean getAdult() {
@@ -210,6 +222,16 @@ public class Movie implements Parcelable {
     }
 
     public Movie() {
+    }
+
+    public Movie(Cursor cursor) {
+        this.id = getColumnInt(cursor, _ID);
+        this.title = getColumnString(cursor, COLUMN_TITLE);
+        this.backdropPath = getColumnString(cursor, COLUMN_BACKDROP);
+        this.posterPath = getColumnString(cursor, COLUMN_POSTER);
+        this.releaseDate = getColumnString(cursor, COLUMN_RELEASE_DATE);
+        this.voteAverage = getColumnFloat(cursor, COLUMN_VOTE);
+        this.overview = getColumnString(cursor, COLUMN_OVERVIEW);
     }
 
     protected Movie(Parcel in) {

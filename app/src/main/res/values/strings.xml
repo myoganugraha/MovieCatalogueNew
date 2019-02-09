@@ -11,9 +11,25 @@
     <string name="lang_dialog_message">Chose Language Bellow</string>
     <string name="search_result_for">Search Result for:</string>
 
+    <string name="key_reminder_daily">reminder_daily</string>
+    <string name="key_reminder_upcoming">reminder_upcoming</string>
+
+    <string name="action_notification">Notification</string>
+    <string name="label_daily_reminder_title">Daily Reminder Notification</string>
+    <string name="label_daily_reminder_summary">Turn on/off daily reminder</string>
+
+    <string name="label_upcoming_reminder_title">Upcoming Reminder Notification</string>
+    <string name="label_upcoming_reminder_summary">Turn on/off upcoming reminder</string>
+
+    <string name="label_alarm_daily_reminder">Good morning! Check new movie today</string>
+    <string name="label_daily_reminder">Daily Reminder Notification is now</string>
+    <string name="label_upcoming_reminder">Upcoming Reminder Notification is now</string>
+
 
     <string-array name="lang_select">
         <item>English</item>
         <item>Indonesian</item>
     </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>
